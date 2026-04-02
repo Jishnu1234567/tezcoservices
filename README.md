@@ -119,7 +119,7 @@ const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
 - [x] Semantic HTML5 structure
 - [x] `sitemap.xml` included
 - [x] `robots.txt` included
-- [ ] Update all URLs from `https://tezco.in/` to your actual domain
+- [ ] Update all URLs from `https://tezcoservices.com/` to your actual domain
 - [ ] Add real images to `/images/` directory
 - [ ] Submit sitemap to Google Search Console
 
@@ -135,4 +135,4 @@ const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
 ---
 
 ## 📞 Support
-**Tezco Pvt Ltd** | info@tezco.in | +91 98765 43210 | Kochi, Kerala
+**Tezco Pvt Ltd** | tezcoservices@gmail.com | +91 8281914873 | Ernakulam, Kerala
