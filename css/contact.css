@@ -1,0 +1,307 @@
+/* ===================================================
+   COLLEGE.CSS — Tezco Services · college.html
+   College / final-year project guidance page.
+   Requires: nav.css loaded first
+   =================================================== */
+
+/* ── Page hero ── */
+.page-hero {
+  padding-top: calc(var(--nav-height) + 60px);
+  padding-bottom: 80px;
+  background: var(--clr-bg2);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 40% 40%, rgba(0,200,255,.09), transparent 70%),
+    radial-gradient(ellipse 50% 50% at 80% 70%, rgba(0,85,204,.06), transparent 70%);
+  pointer-events: none;
+}
+.page-hero .container { position: relative; z-index: 1; }
+.page-hero .section-subtitle { margin: 0 auto 32px; }
+
+/* ── What we offer — 3-col cards ── */
+.college-offers {
+  padding: 80px 0;
+  background: #fff;
+}
+.college-offers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.offer-card {
+  background: #fff;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  text-align: center;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+}
+.offer-card::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  background: var(--grad);
+  transform: scaleX(0); transition: transform .3s; transform-origin: left;
+}
+.offer-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: transparent; }
+.offer-card:hover::after { transform: scaleX(1); }
+.offer-icon {
+  width: 64px; height: 64px;
+  background: linear-gradient(135deg, rgba(0,200,255,.12), rgba(0,85,204,.12));
+  border: 1px solid rgba(0,85,204,.12);
+  border-radius: 20px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.7rem;
+  margin: 0 auto 20px;
+}
+.offer-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem; font-weight: 700;
+  color: var(--clr-text); margin-bottom: 10px;
+}
+.offer-card p {
+  font-family: var(--font-body);
+  font-size: .875rem; color: var(--clr-muted); line-height: 1.7;
+}
+
+/* ── Technologies we support ── */
+.college-tech {
+  padding: 80px 0;
+  background: var(--clr-bg2);
+}
+.tech-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.tech-category-card {
+  background: #fff;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: all .3s;
+}
+.tech-category-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.tech-category-card h4 {
+  font-family: var(--font-display);
+  font-size: 1rem; font-weight: 700;
+  color: var(--clr-text); margin-bottom: 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.tech-category-card h4 span { font-size: 1.2rem; }
+.tech-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tech-tag {
+  font-family: var(--font-body); font-size: .78rem; font-weight: 600;
+  color: var(--clr-blue);
+  background: rgba(0,119,182,.08); border: 1px solid rgba(0,119,182,.15);
+  border-radius: 100px; padding: 4px 12px;
+}
+
+/* ── Project domains ── */
+.college-domains {
+  padding: 80px 0;
+  background: #fff;
+}
+.domains-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+.domain-pill {
+  background: var(--clr-bg2);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  padding: 20px 16px;
+  text-align: center;
+  transition: all .25s;
+  cursor: default;
+}
+.domain-pill:hover {
+  background: linear-gradient(135deg, rgba(0,200,255,.08), rgba(0,85,204,.08));
+  border-color: rgba(0,119,182,.25);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+.domain-pill .domain-icon { font-size: 1.6rem; margin-bottom: 8px; }
+.domain-pill p { font-family: var(--font-body); font-size: .82rem; font-weight: 600; color: var(--clr-text); }
+
+/* ── How it works — steps ── */
+.college-process {
+  padding: 80px 0;
+  background: var(--clr-bg2);
+}
+.college-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+  position: relative;
+}
+/* connector line between steps */
+.college-steps::before {
+  content: '';
+  position: absolute;
+  top: 36px; left: calc(12.5% + 12px); right: calc(12.5% + 12px);
+  height: 2px;
+  background: linear-gradient(90deg, #00C8FF, #0055CC);
+  z-index: 0;
+}
+.college-step {
+  background: #fff;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  transition: all .3s;
+}
+.college-step:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.step-circle {
+  width: 52px; height: 52px;
+  background: var(--grad);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px;
+  font-family: var(--font-display);
+  font-size: 1.1rem; font-weight: 900; color: #fff;
+  box-shadow: 0 4px 20px rgba(0,85,204,.3);
+}
+.college-step h4 {
+  font-family: var(--font-display);
+  font-size: 1rem; font-weight: 700;
+  color: var(--clr-text); margin-bottom: 8px;
+}
+.college-step p {
+  font-family: var(--font-body);
+  font-size: .82rem; color: var(--clr-muted); line-height: 1.65;
+}
+
+/* ── Pricing table ── */
+.college-pricing {
+  padding: 80px 0;
+  background: #fff;
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+  align-items: start;
+}
+.pricing-card {
+  background: #fff;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  text-align: center;
+  position: relative;
+  transition: all .3s;
+}
+.pricing-card.featured {
+  background: var(--clr-text);
+  border-color: transparent;
+  box-shadow: var(--shadow-lg);
+  transform: scale(1.04);
+}
+.pricing-badge {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--grad); color: #fff;
+  font-family: var(--font-body); font-size: .65rem; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  padding: 5px 16px; border-radius: 100px;
+}
+.pricing-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem; font-weight: 700; margin-bottom: 8px;
+  color: var(--clr-text);
+}
+.pricing-card.featured h3 { color: #fff; }
+.pricing-amount {
+  font-family: var(--font-display);
+  font-size: 2.4rem; font-weight: 900;
+  background: var(--grad-text);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  margin: 16px 0 4px;
+}
+.pricing-card.featured .pricing-amount { -webkit-text-fill-color: transparent; }
+.pricing-period {
+  font-family: var(--font-body); font-size: .8rem; color: var(--clr-muted); margin-bottom: 24px;
+}
+.pricing-card.featured .pricing-period { color: rgba(255,255,255,.55); }
+.pricing-features {
+  display: flex; flex-direction: column; gap: 10px;
+  margin-bottom: 28px; text-align: left;
+}
+.pricing-features li {
+  font-family: var(--font-body); font-size: .875rem; color: var(--clr-muted);
+  display: flex; align-items: center; gap: 10px;
+}
+.pricing-card.featured .pricing-features li { color: rgba(255,255,255,.7); }
+.pricing-features li::before {
+  content: '✓';
+  width: 20px; height: 20px;
+  background: var(--grad); color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .65rem; font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── FAQ ── */
+.college-faq { padding: 80px 0; background: var(--clr-bg2); }
+.faq-list { max-width: 720px; margin: 48px auto 0; display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: box-shadow .3s;
+}
+.faq-item:hover { box-shadow: var(--shadow-sm); }
+.faq-question {
+  padding: 20px 24px;
+  font-family: var(--font-display);
+  font-size: 1rem; font-weight: 700; color: var(--clr-text);
+  cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  user-select: none;
+}
+.faq-question::after {
+  content: '+';
+  font-size: 1.4rem; font-weight: 300; color: var(--clr-blue); flex-shrink: 0;
+  transition: transform .3s;
+}
+.faq-item.open .faq-question::after { transform: rotate(45deg); }
+.faq-answer {
+  display: none;
+  padding: 0 24px 20px;
+  font-family: var(--font-body); font-size: .9rem; color: var(--clr-muted); line-height: 1.75;
+}
+.faq-item.open .faq-answer { display: block; }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .college-offers-grid { grid-template-columns: repeat(2, 1fr); }
+  .domains-grid { grid-template-columns: repeat(3, 1fr); }
+  .college-steps { grid-template-columns: repeat(2, 1fr); }
+  .college-steps::before { display: none; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .pricing-card.featured { transform: none; }
+  .tech-category-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .college-offers-grid { grid-template-columns: 1fr; }
+  .domains-grid { grid-template-columns: repeat(2, 1fr); }
+  .college-steps { grid-template-columns: 1fr; }
+}
