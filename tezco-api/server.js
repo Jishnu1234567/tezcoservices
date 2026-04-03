@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 8080;
 app.use(express.json());
 // Replace app.use(cors()); with this:
 app.use(cors({
-    origin: ["https://tezcoservices.vercel.app", "http://localhost:3000"],
+    origin: ["https://tezcoservices.vercel.app"],
     methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"]
 }));
