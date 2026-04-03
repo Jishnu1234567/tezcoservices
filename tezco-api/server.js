@@ -8,7 +8,12 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
-app.use(cors());
+// Replace app.use(cors()); with this:
+app.use(cors({
+    origin: ["https://tezcoservices.vercel.app", "http://localhost:3000"],
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 // Helper for clean email rows
 const emailRow = (label, value) => `
