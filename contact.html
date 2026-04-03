@@ -990,19 +990,7 @@
     document.getElementById('navbar').classList.toggle('scrolled', scrollY > 20);
   });
 
-  /* ── Hamburger ── */
-  const hamburger   = document.getElementById('hamburger');
-  const mobileMenu  = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-  });
-  document.querySelectorAll('.mobile-menu a').forEach(a => {
-    a.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      mobileMenu.classList.remove('open');
-    });
-  });
+
 
   /* ── Reveal on scroll ── */
   const io = new IntersectionObserver(entries => {
