@@ -123,4 +123,4 @@ The contact form currently simulates submission. To make it real, use one of:
 
 ---
 
-Built with ❤️ by Tezco Pvt Ltd — The Technical Expertzs, Kochi
+Built with ❤️ by Tezco Pvt Ltd — The Technical Expertzs, ALUVA
