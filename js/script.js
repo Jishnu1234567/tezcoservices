@@ -65,8 +65,8 @@
 // ── 2. CONFIG ──
 // ── 2. CONFIG ──
 // Replace the old block with ONLY this line:
-// ── 2. CONFIG ──
-const API_BASE = 'https://tezcoservices-production.up.railway.app';
+// Change this line:
+var API_BASE = 'https://tezcoservices-production.up.railway.app';
 
 // ── 3. TOAST HELPER ──
 function showToast(msg, type = 'ok') {
